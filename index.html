@@ -14,51 +14,89 @@
         <h1>Pizza Pizza!</h1>
       </div>
       <form id="formOne">
-        <label for="name">Enter name Here:</label>
-        <input type="text" id="name">
+        <h2>Order:</h2><br>
+          <div>
+            <label for="name">Enter name:</label>
+            <input type="text" id="name">
+          </div>
+        <label for="name">Enter Phone-Number:</label>
+        <input type="text" id="name"><br>
+        <h5>Would you like to get Deliver or Carry Out:<h5>
+          <div class="radio">
+            <label>
+              <input type="radio" onclick="hideaddress()"  name="orderType" value="carryout" checked>Carry Out
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio"  onclick="showaddress()"  name="orderType" value="delivery">Delivery
+            </label>
+          </div>
+          <div class="onDelivery">
+            <div class="form-group">
+              <label for="street">Street Address</label>
+              <input type="text" id="street ">
+            </div>
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city">
+            </div>
+            <div class="form-group">
+              <label for="state">State</label>
+              <input type="text" id="state">
+            </div>
+            <div class="form-group">
+              <label for="zipCode">Zip Code</label>
+              <input type="number" id="zipCode">
+            </div>
+          </div>
+          <br><h4>Please select your size:</h4>
+          <div class="radio">
+            <input type="radio" name="size" value="Small" checked>Small<br>
+          </div>
+          <div class="radio">
+            <input type="radio" name="size" value="Medium">Medium<br>
+          </div>
+          <div class="radio">
+            <input type="radio" name="size" value="Large">Large<br>
+          </div>
+          <img src="img/chart.jpg" alt="pizza size chart id="chart">
+          <br><h4>Select crust:</h4>
+          <div class="radio">
+            <input type="radio" name="crust" value="Thin" checked>Thin-Crust<br>
+          </div>
+          <div class="radio">
+            <input type="radio" name="crust" value="Stuffed">Stuffed Crust<br>
+          </div>
+          <div class="radio">
+            <input type="radio" name="crust" value="Pan">Pan Pizza<br>
+          </div>
 
-        <br><h4>Please select your size:</h4>
-        <div class="radio">
-          <input type="radio" name="size" value="Small" checked>Small<br>
-        </div>
-        <div class="radio">
-          <input type="radio" name="size" value="Medium">Medium<br>
-        </div>
-        <div class="radio">
-          <input type="radio" name="size" value="Large">Large<br>
-        </div>
-        <img src="img/chart.jpg" alt="pizza size chart id="chart">
-        <br><h4>Select crust:</h4>
-        <div class="radio">
-          <input type="radio" name="crust" value="Thin" checked>Thin-Crust<br>
-        </div>
-        <div class="radio">
-          <input type="radio" name="crust" value="Stuffed">Stuffed Crust<br>
-        </div>
-        <div class="radio">
-          <input type="radio" name="crust" value="Pan">Pan Pizza<br>
-        </div>
-
-        <br><h4>Select your topping(s):</h4>
-        <input type="checkbox" name="topping" value="Mozzerella-Cheese" checked> Mozzerella Cheese<br>
-        <input type="checkbox" name="topping" value="Black-Olives"> Black Olives<br>
-        <input type="checkbox" name="topping" value="Pinapple"> Pinapple<br>
-        <input type="checkbox" name="topping" value="Red-Onions"> Red Onions<br>
-        <input type="checkbox" name="topping" value="Pepperoni"> Pepperoni<br>
-        <input type="checkbox" name="topping" value="Bacon"> Bacon<br>
-        <input type="checkbox" name="topping" value="Ham"> Ham<br>
-        <input type="checkbox" name="topping" value="Chicken"> Chicken<br><br><br>
-        <button type="submit" name="button" class="btn btn-success">Place Order!</button>
-        </form>
-
-        <form class="hiddenForm">
-        <div class="hidden-info">
-          <h1>Confirmation for <span class="hiddenName"></span>:</h1>
-          <p>You have selected a: <b><span class="hiddenCrust"></span> pizza</b></p>
-          <p>Your pizza size is: <b><span class="hiddenSize"></span></b></p>
-          <p>Your toppings are: <b><span class="hiddenToppings"></span></b></p>
-          <p>Your total price: <b>$<span class="hiddenPrice"></span>.00</b></p>
-        </div>
-        <form>
+          <br><h4>Select your topping(s):</h4>
+          <input type="checkbox" name="topping" value="Mozzerella-Cheese" checked> Mozzerella Cheese<br>
+          <input type="checkbox" name="topping" value="Black-Olives"> Black Olives<br>
+          <input type="checkbox" name="topping" value="Pinapple"> Pinapple<br>
+          <input type="checkbox" name="topping" value="Red-Onions"> Red Onions<br>
+          <input type="checkbox" name="topping" value="Pepperoni"> Pepperoni<br>
+          <input type="checkbox" name="topping" value="Bacon"> Bacon<br>
+          <input type="checkbox" name="topping" value="Ham"> Ham<br>
+          <input type="checkbox" name="topping" value="Chicken"> Chicken<br><br><br>
+          <button type="submit" name="button" class="btn btn-success">Place Order!</button>
+          </form>
+          <form class="hiddenForm">
+            <div class="hidden-info">
+              <h1>Confirmation for <span class="hiddenName"></span>:</h1>
+              <p>You have selected a: <b><span class="hiddenCrust"></span> pizza</b></p>
+              <p>Your pizza size is: <b><span class="hiddenSize"></span></b></p>
+              <p>Your total price: <b>$<span class="hiddenPrice"></span>.00</b></p>
+              <h4>Delivery Confirmation</h4>
+              <div class="hiddenDelivery">
+                <p>Your Street-Address: <b><span class="hiddenAddress"></span></b></p>
+                <p>City: <b><span class="hiddenCity"></span></b></p>
+                <p>State: <b><span class="hiddenState"></span></b></p>
+                <p>ZipCode: <b><span class="hiddenZip"></span></b></p>
+              </div>
+            </div>
+          <form>
   </body>
 </html>

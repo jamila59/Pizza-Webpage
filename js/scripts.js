@@ -28,15 +28,31 @@ Selections.prototype.toppingsCheck = function() {
     return this.price += 4
   }
 }
+function showaddress(){
+  $(".onDelivery").show();
+  $(".carryout").hide();
+  $(".delivery").show();
+  }
+
+function hideaddress(){
+$(".onDelivery").hide();
+$(".carryout").show();
+$(".delivery").hide();
+}
 
 $(document).ready(function () {
   $("#formOne").submit(function(event) {
     event.preventDefault();
+    var phoneNumber = $("input#phone").val();
+    var orderType = $("input:radio[name=orderType]:checked").val();
+    var street = $("input#street").val();
+    var city = $("input#city").val();
+    var state = $("input#state").val();
+    var zipCode = $("input#zipCode").val();
     var userName = $("input#name").val();
     var userCrust = ($("input:radio[name=crust]:checked").val());
     var userSize = ($("input:radio[name=size]:checked").val());
     var userToppings = ($("input:checkbox[name=topping]:checked").val());
-    console.log(userName, userSize, userCrust, userToppings);
     var userChoices = new Selections (userCrust, userSize, userToppings);
     userChoices.crustCheck();
     userChoices.sizeCheck();
@@ -45,7 +61,10 @@ $(document).ready(function () {
     $(".hiddenName").text(userName);
     $(".hiddenCrust").text(userChoices.crust);
     $(".hiddenSize").text(userChoices.size);
-    $(".hiddenToppings").text(userChoices.toppings);
     $(".hiddenPrice").text(userChoices.price);
+    $(".hiddenAddress").text(street);
+    $(".hiddenCity").text(city);
+    $(".hiddenState").text(state);
+    $(".hiddenZip").text(zipCode);
   })
 })
