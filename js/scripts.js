@@ -42,6 +42,7 @@ $(document).ready(function () {
     userChoices.sizeCheck();
     userChoices.toppingsCheck();
     $(".hidden-info").show();
+    $(".hiddenName").text(userName);
     $(".hiddenCrust").text(userChoices.crust);
     $(".hiddenSize").text(userChoices.size);
     $(".hiddenToppings").text(userChoices.toppings);

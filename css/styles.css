@@ -1,3 +1,7 @@
 .hidden-info {
   display: none;
 }
+
+ body{
+  background-image: ("img/pizza.jpg");
+}
