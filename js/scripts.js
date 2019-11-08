@@ -24,10 +24,8 @@ Selections.prototype.sizeCheck = function() {
 }
 
 Selections.prototype.toppingsCheck = function() {
-  if (this.toppings === "Pepperoni" || this.toppings === "Bacon" || this.toppings === "Ham" || this.toppings === "Chicken") {
+  if (this.toppings === "Pepperoni" || this.toppings === "Bacon" || this.toppings === "Ham" || this.toppings === "Chicken" || this.toppings === "Mozzerella-Cheese" || this.toppings === "Red-Onions" || this.toppings === "Pinapple" || this.topping === "Black-Olives") {
     return this.price += 4
-  } else if (this.toppings === "Mozzerella-Cheese") {
-    return this.price +=2
   }
 }
 
