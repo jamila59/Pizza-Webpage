@@ -19,3 +19,6 @@ body, html {
 #chart {
   background: none;
 }
+hiddenDelivery {
+  display: none;
+}
