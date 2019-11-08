@@ -8,6 +8,57 @@
     <title></title>
   </head>
   <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Pizza Pizza!</h1>
+      </div>
+      <form class="formOne">
+        <label for="name">Enter name Here:</label>
+        <input type="text" name="name">
 
+        <br><h4>Please select your size:</h4>
+        <div class="radio">
+          <input type="radio" name="size" value="sm" checked>Small<br>
+        </div>
+        <div class="radio">
+          <input type="radio" name="size" value="md">Medium<br>
+        </div>
+        <div class="radio">
+          <input type="radio" name="size" value="lg">Large<br>
+        </div>
+
+        <br><h4>Select crust:</h4>
+        <div class="radio">
+          <input type="radio" name="crust" value="thin" checked>Thin-Crust<br>
+        </div>
+        <div class="radio">
+          <input type="radio" name="crust" value="stuffed">Stuffed Scrust<br>
+        </div>
+        <div class="radio">
+          <input type="radio" name="crust" value="pan">Pan Pizza<br>
+        </div>
+
+        <br><h4>Select your topping(s):</h4>
+        <input type="checkbox" name="topping" value="1" checked> Mozzerella Cheese<br>
+        <input type="checkbox" name="topping" value="2"> Black Olives<br>
+        <input type="checkbox" name="topping" value="3"> Pinapple<br>
+        <input type="checkbox" name="topping" value="4"> Red Onions<br>
+        <br><br>
+        <input type="checkbox" name="topping" value="5"> Pepperoni<br>
+        <input type="checkbox" name="topping" value="6"> Bacon<br>
+        <input type="checkbox" name="topping" value="7"> Ham<br>
+        <input type="checkbox" name="topping" value="8"> Chicken<br><br><br>
+
+        <button type="submit" name="button" class="btn btn-success">Place Order!</button>
+        </form>
+
+        <div class="hidden-info">
+          <h1>Confirmation:</h1>
+          <p>You have selected: <b><span class="hiddenCrust"></span></b></p>
+          <p>Your pizza size is: <b><span class="hiddenSize"></span></b></p>
+          <p>Your toppings are: <b><span class="hiddenToppings"></span></b></p>
+          <p>Your total price: <b>$<span class="hiddenPrice"></span>.00</b></p>
+        </div>
+    </div>
   </body>
 </html>
