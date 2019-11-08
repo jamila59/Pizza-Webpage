@@ -2,6 +2,20 @@
   display: none;
 }
 
- body{
-  background-image: ("img/pizza.jpg");
+body, html {
+  height: 100%;
+}
+.background {
+  height: 100%
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.jumbotron {
+  background: none;
+  text-align:center;
+  text-shadow: 2px 2px 4px #000000;
+}
+#chart {
+  background: none;
 }
