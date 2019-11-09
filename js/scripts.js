@@ -1,3 +1,4 @@
+// Back-end Logic
 function Selections (crust, size, toppings) {
   this.crust = crust,
   this.size = size,
@@ -39,7 +40,7 @@ $(".onDelivery").hide();
 $(".carryout").show();
 $(".delivery").hide();
 }
-
+// User-interface
 $(document).ready(function () {
   $("#formOne").submit(function(event) {
     event.preventDefault();
@@ -66,5 +67,7 @@ $(document).ready(function () {
     $(".hiddenCity").text(city);
     $(".hiddenState").text(state);
     $(".hiddenZip").text(zipCode);
+    // if (orderType==="delivery"){
+    // .onDelivery.show();
   })
 })
